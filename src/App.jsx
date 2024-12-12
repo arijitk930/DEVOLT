@@ -1,5 +1,7 @@
 import { FaLinkedin, FaInstagram } from "react-icons/fa";
 import logo from "./assets/D (3).png";
+import { ReactTyped } from "react-typed";
+import CountdownTimer from "./Counter";
 
 const ComingSoon = () => {
   return (
@@ -8,22 +10,37 @@ const ComingSoon = () => {
       <img
         src={logo}
         alt="Devolt Logo"
-        className="absolute top-4 left-10 w-24 h-auto" // Updated size for better appearance
+        className="absolute top-8 left-8 w-44 " // Updated size for better appearance
       />
 
       {/* Main content */}
       <div className="mb-12">
-        <h1 className="text-8xl font-bold  text-purple-600 mb-8 uppercase">
-          Coming <span className="text-white">Soon.....</span>
+        <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 font-futuristic">
+          <ReactTyped
+            strings={[
+              "Just around the",
+              "corner...",
+            ]}
+
+            typeSpeed={70}
+            backSpeed={30}
+            loop
+          />
         </h1>
       </div>
-
+      <CountdownTimer />
       {/* Social icons */}
-      <div className="flex space-x-6 mt-4">
-        <a href="#" className="text-white hover:text-gray-300 text-2xl">
+      <div className="absolute bottom-4 flex space-x-6">
+        <a
+          href="#"
+          className="text-white hover:text-gray-300 text-2xl"
+        >
           <FaLinkedin />
         </a>
-        <a href="#" className="text-white hover:text-gray-300 text-2xl">
+        <a
+          href="#"
+          className="text-white hover:text-gray-300 text-2xl"
+        >
           <FaInstagram />
         </a>
       </div>
