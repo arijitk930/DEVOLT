@@ -18,12 +18,11 @@ const ComingSoon = () => {
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 font-futuristic">
           <ReactTyped
             strings={[
-              "Just around the",
-              "corner...",
+              "Arriving Soon...",
             ]}
 
-            typeSpeed={70}
-            backSpeed={30}
+            typeSpeed={100}
+            backSpeed={40}
             loop
           />
         </h1>
